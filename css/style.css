@@ -212,3 +212,16 @@ body {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
   align-items: center; }
+
+.about {
+  grid-column: center-start / center-end;
+  padding: 10rem 0;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      padding: 10rem 1.6rem; } }
+  .about__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 3rem; }
