@@ -1,16 +1,27 @@
 .about {
-  grid-column: center-start / center-end;
-  padding: $sections-padding;
+  background-color: #f1f5f8;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: [full-start] 1fr [center-start]repeat(
+      8,
+      [col-start]minmax(min-content, 14rem) [col-end]
+    ) [center-end] 1fr[full-end];
   text-align: center;
 
   @media only screen and (max-width: $bp-small) {
     padding: 10rem 1.6rem;
   }
-  &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    // grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 2rem;
-    grid-column-gap: 3rem;
-  }
+}
+
+.about__container {
+  grid-column: center-start / center-end;
+  background-color: yellowgreen;
+}
+
+wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  // grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 2rem;
+  grid-column-gap: 3rem;
 }
