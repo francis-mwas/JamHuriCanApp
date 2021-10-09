@@ -1,0 +1,71 @@
+.mission {
+  //   background-color: $primary-color;
+  background-image: linear-gradient(
+    to right bottom,
+    $primary-color,
+    $color-secondary-1
+  );
+  color: $font-color-1;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr [center-start]repeat(
+      8,
+      [col-start]minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr[full-end];
+  text-align: center;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 10rem 1.6rem;
+  }
+  &__text {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+  &__underline {
+    background-color: $tertiary-color;
+  }
+  h2 {
+    color: $font-color-1;
+  }
+}
+
+.mission__container {
+  //   background-color: $font-color-1;
+  grid-column: center-start / center-end;
+  padding: $sections-padding;
+}
+
+.mission__wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      90deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../images/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 3rem;
+}
+.mission__card-1 {
+  width: 50%;
+  padding: 10rem;
+}
+.mission-wrapper__text {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+.mission-svg__icon {
+  width: 2rem;
+  height: 3rem;
+  fill: #101d2c;
+}

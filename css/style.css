@@ -255,6 +255,53 @@ body {
   left: -1.5rem;
   border-radius: 1rem; }
 
+.mission {
+  background-image: linear-gradient(to right bottom, #22793c, #28282b);
+  color: whitesmoke;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .mission {
+      padding: 10rem 1.6rem; } }
+  .mission__text {
+    font-size: 1.6rem;
+    line-height: 2; }
+  .mission__underline {
+    background-color: #ec2224; }
+  .mission h2 {
+    color: whitesmoke; }
+
+.mission__container {
+  grid-column: center-start / center-end;
+  padding: 12rem 0; }
+
+.mission__wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 3rem; }
+
+.mission__card-1 {
+  width: 50%;
+  padding: 10rem; }
+
+.mission-wrapper__text {
+  font-size: 1.6rem;
+  line-height: 2; }
+
+.mission-svg__icon {
+  width: 2rem;
+  height: 3rem;
+  fill: #101d2c; }
+
 .footer {
   background-color: #28282b;
   padding-top: 5rem;
