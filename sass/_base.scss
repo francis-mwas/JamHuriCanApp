@@ -2,13 +2,17 @@
 $color-grey-light-1: #dd6749;
 $color-grey-light-2: #aaa;
 $color-grey-1: #d7d7d7;
+$primary-gray: #ececec;
 $tertiary-color: #f9f7f6;
 $primary-color: #22793c;
+$color-secondary: #08eb81;
+$color-secondary-1: #28282b;
 $tertiary-color: #ec2224;
 $primary-dark: #000000;
+$color-white: #fff;
 
 // Global styling
-$sections-padding: 10rem 0;
+$sections-padding: 12rem 0;
 $color-black: #000;
 
 // FONTS VARIBLES
@@ -61,12 +65,14 @@ body {
 .container {
   display: grid;
 
-  grid-template-rows: 100vh min-content min-content repeat(3, min-content);
+  grid-template-rows: 95vh min-content repeat(3, min-content);
   // grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
-  grid-template-columns: [full-start] 1fr [center-start]repeat(
+  grid-template-columns:
+    [full-start] 1fr [center-start]repeat(
       8,
       [col-start]minmax(min-content, 14rem) [col-end]
-    ) [center-end] 1fr[full-end];
+    )
+    [center-end] 1fr[full-end];
 
   @media only screen and (max-width: $bp-medium) {
     grid-template-rows: 65vh 75vh min-content min-content repeat(3, min-content);
@@ -75,4 +81,24 @@ body {
   @media only screen and (max-width: $bp-small) {
     grid-template-rows: 45vh 60vh min-content min-content repeat(3, min-content);
   }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.title__text h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: capitalize;
+  color: $tertiary-color;
+  font-weight: 700;
+}
+
+.under-line {
+  width: 7rem;
+  height: 0.5rem;
+  background-color: $tertiary-color;
+  margin: 0 auto;
 }

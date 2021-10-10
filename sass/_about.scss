@@ -1,0 +1,53 @@
+.about {
+  // background-color: #f1f5f8;
+  background-color: $primary-gray;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr [center-start]repeat(
+      8,
+      [col-start]minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr[full-end];
+  text-align: center;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 10rem 1.6rem;
+  }
+  &__text {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+}
+
+.about__container {
+  grid-column: center-start / center-end;
+  padding: $sections-padding;
+}
+
+.about__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 3rem;
+}
+.card-one {
+  &__img {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+}
+.about__card-one {
+  position: relative;
+}
+.about__card-one::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1.1rem solid $primary-color;
+  top: -1.5rem;
+  left: -1.5rem;
+  border-radius: 1rem;
+}
