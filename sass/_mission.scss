@@ -20,15 +20,16 @@
     padding: 10rem 1.6rem;
   }
   &__text {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     line-height: 2;
   }
-  &__underline {
-    background-color: $tertiary-color;
-  }
+
   h2 {
-    color: $font-color-1;
+    color: $tertiary-color;
   }
+}
+.title-modifier {
+  background-color: $tertiary-color;
 }
 
 .mission__container {
@@ -46,8 +47,10 @@
       rgba($color-white, 0.9) 50%,
       transparent 50%
     ),
-    url(../images/banner-006.jpg);
-  background-size: 100%;
+    url(../images/banner-001.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
@@ -55,17 +58,29 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 3rem;
+
+  &--link-icon {
+    width: 4rem;
+    height: 3rem;
+    fill: $tertiary-color;
+  }
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.4rem;
+    line-height: 2;
+  }
+  &--inner-container {
+    display: flex;
+    gap: 1rem;
+  }
+  &--text {
+    text-align: justify;
+  }
 }
 .mission__card-1 {
   width: 50%;
-  padding: 10rem;
-}
-.mission-wrapper__text {
-  font-size: 1.6rem;
-  line-height: 2;
-}
-.mission-svg__icon {
-  width: 2rem;
-  height: 3rem;
-  fill: #101d2c;
+  padding: 7rem;
 }
